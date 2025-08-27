@@ -1,0 +1,203 @@
+/* .only-you-wrap {
+    background: rgba(255, 0, 0, 0.1);
+} */
+ 
+
+.only-you-wrap .title {
+    margin-bottom: 0;
+}
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.only-tab-list {
+    display: flex;
+    gap: 10px;
+}
+
+.only-tab-list li a {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #092729;
+    border-radius: 30px;
+    font-size: 1.13rem;
+}
+
+.only-tab-list li a:hover {
+    background: #ddd;
+}
+
+.only-tab-list li.active a {
+    background: #092729;
+    color: #fff;
+    font-weight: 600;
+}
+
+.only-slider-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.only-slider-list>div {
+    position: relative;
+    /* border: 1px solid red; */
+    padding: 2% 0;
+    border-radius: 40px 40px 0 40px;
+    overflow: hidden;
+    background: #fff;
+
+}
+
+.only-slider-list>div img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; 이미지 간격에 맞게 맞추기 */
+    object-fit: cover;
+}
+
+.only-slider-list>div .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.only-slider-list>div .text-box {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    /* left:50%;
+    transform: translateX(-50%); */
+    font-size: 1.13rem;
+    /* background-color: rgba(0, 0, 255, 0.1); */
+    z-index: 1;
+}
+
+.only-slider-list>div .radius {
+    width: 75px;
+    height: 75px;
+    background: red;
+    background: #fff;
+    border-radius: 40px 0 0 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+.only-slider-list>div .radius::before {
+    content: "";
+    display: block;
+    background: green;
+    /* 투명처리 background: transparent; */
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: -80px;
+    bottom: 0;
+    box-shadow: 40px 40px 0 yellow;
+    box-shadow: 40px 40px 0 #fff;
+}
+
+.only-slider-list>div .radius::after {
+    content: "";
+    display: block;
+    background: hotpink;
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    box-shadow: 40px 40px 0 orange;
+    box-shadow: 40px 40px 0 #fff;
+
+}
+
+.only-slider-list>div:hover .hover-img {
+    opacity: 1;
+}
+
+.only-slider-list>div:hover .text-box {
+    color: #fff;
+}
+
+.only-slider-list>div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: #092729 url(../images/arrow-right.svg) no-repeat center center;
+    background-size: 50%;
+    z-index: 1000;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transition: 0.3s;
+
+}
+
+.only-slider-list>div:hover::after {
+    right: 0;
+    bottom: 0;
+}
+
+.sellection-slider-wrap .sellection-list .sellection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sellection>div img {
+    width: 100%;
+}
+
+.sel-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-left: 95px;
+}
+
+.sel-right .text-box {
+    margin: 75px 0 30px;
+    text-align: center;
+}
+
+
+.sel-right .text-box>strong {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #092729;
+    margin-bottom: 20px;
+}
+
+.sel-right .text-box>p {
+    font-size: 1.13rem;
+    color: #092729;
+    padding: 20px 0;
+
+}
+
+.sel-right .text-box .more {
+    /* display: inline-block; */
+    /* 인라인속성은 항상 블럭처리 */
+    display: inline-block;
+    border-radius: 30px;
+    background: #092729;
+    color: #fff;
+    padding: 11px 20px;
+}

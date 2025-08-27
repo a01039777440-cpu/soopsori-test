@@ -1,0 +1,94 @@
+/* 해상도 1280이하 */
+@media screen and (max-width:1280px) {
+    .inner {
+        padding: 0 20px;
+    }
+
+    .main-menu {
+        gap: 3rem;
+    }
+
+    .gnb {
+        gap: 1.3rem;
+    }
+
+    section .title {
+        font-size: 3rem;
+    }
+
+    .only-tab-list li a {
+        padding: 0.9rem 0.5rem;
+    }
+}
+
+
+
+/* 해상도 1024이하 */
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* 본문에 em으로 부여한 css들은 전부 해상도 기본폰트에 맞춰 자동사이즈 */
+
+    /* 1.제거하기 */
+    .main-menu {
+        display: none !important;
+        ;
+    }
+
+    .m-hide {
+        display: none;
+    }
+
+    /* 2.보이기 */
+    .ham-btn {
+        display: block;
+    }
+
+    /* 3.100%만들기 */
+
+    /* 4. footer .inner에 준 flex를 취소하여
+    footer-left 와 footer-right를 다른줄로 변경 */
+
+    footer .inner {
+        display: block;
+        padding: 3rem 20px;
+    }
+
+    .footer-right .sns-list {
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+    }
+
+    .footer-right .footer-menu {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* 해상도 768이하 */
+@media screen and (max-width:768px) {
+    html {
+        font-size: 12px;
+    }
+
+    /* 1. header .inner 줄간격 */
+    header .inner {
+        line-height: 56px;
+
+    }
+
+    /* 2. 로고 사이즈 줄이기 */
+    .logo img {
+        width: 110px;
+
+    }
+
+    /* 3.햄버거 버튼 크기 줄이기 */
+    .ham-btn img {
+        width: 24px;
+    }
+}
